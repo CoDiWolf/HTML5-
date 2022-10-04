@@ -5,6 +5,7 @@ html, body {
 }
 
 body {
+    position:fixed
     font-family: "Helvetica Neue",sans-serif;
     font-weight: lighter;
     width: 100%;
@@ -84,7 +85,7 @@ nav {
 
 nav ul {
     line-height: 60px;
-    list-style: none;
+    list-style: scroll;
     background: rgba(0, 0, 0, 0);
     overflow: hidden;
     color: #fff;
@@ -120,40 +121,6 @@ nav ul li a {
     cursor: pointer;
     color: #fff;
     display: none;
-}
-
-@media(max-width: 786px) {
-
-    .logo {
-          position: fixed;
-          top: 0;
-          margin-top: 16px;
-    }
-
-    nav ul {
-          max-height: 1px;
-          background: #000;
-    }
-
-    nav.black ul {
-          background: #000;
-    }
-
-    .showing {
-          max-height: 34em;
-    }
-
-    nav ul li {
-          box-sizing: border-box;
-          width: 100%;
-          padding: 24px;
-          text-align: center;
-    }
-
-    .menu-icon {
-          display: block;
-    }
-
 }
 #search {
     float: right;
@@ -197,4 +164,79 @@ nav ul li a {
     right: 0;
     top: 5px;
     border-radius:1px;
+}
+@media(max-width: 786px) {
+
+    .logo {
+          position: fixed;
+          top: 0;
+          margin-top: 0px;
+          margin-left:15px;
+    }
+
+    nav ul {
+          max-height: 1px;
+          background: #000;
+          
+    }
+
+    nav.black ul {
+          background: #000;
+    }
+
+    .showing {
+          max-height: 50em;
+    }
+
+    nav ul li {
+          box-sizing: border-box;
+          width: 100%;
+          padding: 24px;
+          text-align: center;
+    }
+
+    .menu-icon {
+          display: block;
+    }
+    .btn {
+        height: 30px;
+        position: absolute;
+        right: 0;
+        top: 5px;
+        border-radius:1px;
+    
+    }
+    #search {
+        float: center;
+        margin-top: 9px;
+        width: 250px;
+        margin-left: 0px;
+    }
+    
+    .search {
+        padding: 5px 0;
+        width: 230px;
+        height: 50px;
+        position: relative;
+        left: 150px;
+        float: absolute;
+        line-height: 22px;
+}.search input {
+    position: center;
+    width: 0px;
+    float: center;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+    height: 30px;
+    line-height: 18px;
+    padding: 0 2px 0 2px;
+    border-radius:1px;
+}
+
+    .search:hover input, .search input:focus {
+        width: 200px;
+        margin-left: 0px;
+    }
 }
